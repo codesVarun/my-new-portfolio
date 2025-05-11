@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +21,3 @@ jobs:
 
     - name: Build
       run: bun run build
-
-    - name: Deploy (custom script or SSH to server)
-      run: ./deploy.sh
