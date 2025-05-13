@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Varun Singh",
   description: "This website is a portfolio website of varun and it manages by varun.",
 };
 
