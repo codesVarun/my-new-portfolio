@@ -1,6 +1,5 @@
+import HomePage from 'codesVarun/app/home/page';
 
 export default function Home() {
-  return (
-    <h1>codesVarun</h1>
-  );
+  return <HomePage />;
 }
