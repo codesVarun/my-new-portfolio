@@ -47,7 +47,7 @@ export default function RootLayout({
           <div className="relative z-10 flex justify-center min-h-screen px-4 sm:px-6 py-10">
             <div className="grid grid-cols-1 lg:grid-cols-[auto_1px_1fr] max-w-6xl w-full gap-6 items-start">
               {/* Profile Card */}
-              <aside className="flex flex-col items-center space-y-4">
+              <aside className="flex flex-col items-center space-y-4 mt-10">
                 {/* Card with Image and Info */}
                 <Card className="overflow-hidden text-center w-full max-w-xs">
                   <Image
