@@ -1,10 +1,4 @@
-export interface Project {
-  projectId: string;
-  projectName: string;
-  projectDescription: string;
-  projectRepoLink?: string;
-  projectLiveUrl?: string;
-}
+import { Project } from "codesVarun/utils/types/types"; 
 
 export const projectMockData: Project[] = [
   {

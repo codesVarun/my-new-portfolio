@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { listProjects } from "../data-access/api";
-import { Project } from "../data-access/project-mock-data";
+import { Project } from "codesVarun/utils/types/types";
 import { ArrowUpIcon } from "lucide-react";
 
 const ProjectsPage = () => {
