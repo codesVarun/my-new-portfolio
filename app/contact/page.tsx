@@ -2,6 +2,7 @@
 
 import { MailIcon, PhoneIcon, LinkedinIcon, GithubIcon } from "lucide-react";
 import Link from "next/link";
+import { CONTACT_INFO } from "codesVarun/utils/constants/contact.constants";
 
 export default function ContactPage() {
   return (
@@ -9,55 +10,63 @@ export default function ContactPage() {
       <h1 className="text-4xl font-bold text-primary">Contact</h1>
 
       <div className="space-y-6">
-        {/* Mobile */}
+        {/* Phone */}
         <div>
-          <h2 className="text-2xl font-semibold mb-2 text-white">Phone</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-white">
+            {CONTACT_INFO.phone.label}
+          </h2>
           <div className="flex items-center space-x-3">
             <PhoneIcon className="w-5 h-5 text-primary" />
-            <span className="text-lg">+91 80779 66845</span>
+            <span className="text-lg">{CONTACT_INFO.phone.number}</span>
           </div>
         </div>
 
         {/* Email */}
         <div>
-          <h2 className="text-2xl font-semibold mb-2 text-white">Email</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-white">
+            {CONTACT_INFO.email.label}
+          </h2>
           <div className="flex items-center space-x-3">
             <MailIcon className="w-5 h-5 text-primary" />
             <a
-              href="mailto:singhvarun9554@gmail.com"
+              href={CONTACT_INFO.email.mailto}
               className="text-lg hover:underline"
             >
-              singhvarun9554@gmail.com
+              {CONTACT_INFO.email.address}
             </a>
           </div>
         </div>
 
         {/* LinkedIn */}
         <div>
-          <h2 className="text-2xl font-semibold mb-2 text-white">LinkedIn</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-white">
+            {CONTACT_INFO.linkedin.label}
+          </h2>
           <div className="flex items-center space-x-3">
             <LinkedinIcon className="w-5 h-5 text-primary" />
             <Link
-              href="https://www.linkedin.com/in/codesVarun/"
+              href={CONTACT_INFO.linkedin.url}
               target="_blank"
               className="text-lg hover:underline"
             >
-              linkedin.com/in/codesVarun
+              {CONTACT_INFO.linkedin.display}
             </Link>
           </div>
         </div>
 
         {/* GitHub */}
         <div>
-          <h2 className="text-2xl font-semibold mb-2 text-white">GitHub</h2>
+          <h2 className="text-2xl font-semibold mb-2 text-white">
+            {CONTACT_INFO.github.label}
+          </h2>
           <div className="flex items-center space-x-3">
             <GithubIcon className="w-5 h-5 text-primary" />
             <Link
-              href="https://github.com/codesVarun"
+              href={CONTACT_INFO.github.url}
               target="_blank"
               className="text-lg hover:underline"
             >
-              github.com/codesVarun
+              {CONTACT_INFO.github.display}
             </Link>
           </div>
         </div>
