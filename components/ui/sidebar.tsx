@@ -13,77 +13,72 @@ const links = [
 ];
 
 export default function Sidebar() {
-  const [hovered, setHovered] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // 👇 Automatically close sidebar when resizing to desktop
+  // Close sidebar on desktop resize
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 640px)");
-
     const handleResize = () => {
-      if (mediaQuery.matches) {
-        setMobileOpen(false);
-      }
+      if (mediaQuery.matches) setMobileOpen(false);
     };
-
     mediaQuery.addEventListener("change", handleResize);
     return () => mediaQuery.removeEventListener("change", handleResize);
   }, []);
 
   return (
     <>
-      {/* Mobile Toggle Button */}
-      <div className="fixed bottom-4 right-4 z-50 sm:hidden">
+      {/* Toggle Button (Top-Right on Mobile) */}
+      <div className="fixed top-4 right-4 z-50 sm:hidden">
         <Button
           variant="ghost"
           size="icon"
           onClick={() => setMobileOpen(!mobileOpen)}
           className="bg-primary hover:bg-primary/80"
         >
-          {mobileOpen ? (
-            <X className="w-5 h-5" />
-          ) : (
-            <Menu className="w-5 h-5" />
-          )}
+          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </Button>
       </div>
 
-      {/* Sidebar */}
-      <aside
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className={`
-          fixed z-50 p-2 border border-border bg-primary shadow-lg rounded-xl transition-all duration-300
-          flex flex-col space-y-2
-          ${
-            mobileOpen ? "left-4 bottom-20" : "left-[-300px]" // fully hide offscreen
-          }
-          sm:left-auto sm:bottom-auto sm:right-4 sm:top-4
-        `}
-      >
-        <nav>
+      {/* Sidebar (Mobile only, under the icon) */}
+      {mobileOpen && (
+        <aside
+          className="
+            fixed top-16 right-4 z-40 sm:hidden 
+            bg-primary border border-border shadow-xl rounded-xl p-2 
+            flex flex-col space-y-2 w-48
+            transition-all animate-in fade-in slide-in-from-top-2
+          "
+        >
           {links.map(({ href, label, icon: Icon }) => (
             <Link key={href} href={href}>
               <Button
                 variant="ghost"
-                className="flex items-center space-x-2 group w-full"
-                onClick={() => setMobileOpen(false)} // auto close on link click
+                className="flex items-center space-x-2 w-full justify-start"
+                onClick={() => setMobileOpen(false)} // close after navigation
               >
                 <Icon className="h-5 w-5" />
-                <span
-                  className={`whitespace-nowrap transition-all duration-200 text-sm font-medium
-                    ${
-                      hovered || mobileOpen
-                        ? "opacity-100 ml-2"
-                        : "opacity-0 w-0 overflow-hidden"
-                    } hidden sm:inline`}
-                >
-                  {label}
-                </span>
+                <span className="text-sm font-medium">{label}</span>
               </Button>
             </Link>
           ))}
-        </nav>
+        </aside>
+      )}
+
+      {/* Desktop Sidebar (unchanged) */}
+      <aside className="hidden sm:flex fixed z-50 p-2 top-4 right-4 border border-border bg-primary shadow-lg rounded-xl flex-col space-y-2">
+        {links.map(({ href, label, icon: Icon }) => (
+          <Link key={href} href={href}>
+            <Button
+              variant="ghost"
+              className="flex items-center space-x-2 group w-full"
+            >
+              <Icon className="h-5 w-5" />
+              <span className="whitespace-nowrap text-sm font-medium hidden sm:inline">
+                {label}
+              </span>
+            </Button>
+          </Link>
+        ))}
       </aside>
     </>
   );
