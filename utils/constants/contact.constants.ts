@@ -5,8 +5,8 @@ export const CONTACT_INFO = {
   },
   email: {
     label: "Email",
-    address: "singhvarun9554@gmail.com",
-    mailto: "mailto:singhvarun9554@gmail.com",
+    address: "varun@codesvarun.dev",
+    mailto: "mailto:varun@codesvarun.dev",
   },
   linkedin: {
     label: "LinkedIn",
