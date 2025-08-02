@@ -1,6 +1,6 @@
 export const ABOUT_CONTENT = {
   education: [
-    "B.Tech in Computer Science & Engineering (2024)",
+    "B.Tech in Computer Science & Engineering (2024) - Scored 7.6 CGPA",
     "Diploma in Computer Science & Engineering (2020) – Scored 74%",
     "High School (2015) – Scored 81%",
   ],
@@ -12,13 +12,14 @@ export const ABOUT_CONTENT = {
       duration: "Jan 2025 – Present",
     },
     {
-      title: "Full Stack Developer",
+      title: "Data Engineer - Trainee",
       company: "V Connect Pvt. Ltd",
       duration: "July 2024 – Jan 2025",
     },
   ],
 
   certifications: [
+    "Ultimate AWS Certified Solutions Architect Associate 2025 – Udemy",
     "Full-Stack Bootcamp 2023 – Udemy",
     "JavaScript Trainee (Remote) – RecruitNXT",
     "Data Structures & Algorithms in JavaScript – Udemy",
@@ -31,7 +32,7 @@ export const ABOUT_CONTENT = {
       items: [
         "The Master Algorithm – Pedro Domingos",
         "Atomic Habits – James Clear",
-        "The Quick and Easy Way to Effective Speaking",
+        "The Quick and Easy Way to Effective Speaking - Dale Carnegie",
         "Think and Grow Rich – Napoleon Hill",
       ],
     },
