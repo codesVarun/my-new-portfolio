@@ -6,15 +6,20 @@ export const ABOUT_CONTENT = {
   ],
 
   experience: [
+        {
+      title: "Data Engineer",
+      company: "EXL Service, Noida, UP",
+      duration: "Aug 2025 – Present",
+    },
     {
       title: "Data Engineer",
-      company: "NavAdr Technology Solution",
-      duration: "Jan 2025 – Present",
+      company: "NavAdr Technology Solution, Pune, Maharashtra",
+      duration: "Dec 2024 – Aug 2025",
     },
     {
       title: "Data Engineer - Trainee",
-      company: "V Connect Pvt. Ltd",
-      duration: "July 2024 – Jan 2025",
+      company: "SDNTECH Solution, Noida, UP",
+      duration: "July 2024 – Dec 2024",
     },
   ],
 
