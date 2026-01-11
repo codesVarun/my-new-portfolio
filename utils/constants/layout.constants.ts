@@ -15,5 +15,5 @@ export const SOCIAL_LINKS = {
   github: "https://github.com/codesVarun",
   twitter: "https://twitter.com/codesVarun",
   facebook: "https://facebook.com/codesVarun",
-  instagram: "https://instagram.com/varunxpy",
+  instagram: "https://instagram.com/varun.py",
 };
