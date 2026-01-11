@@ -6,19 +6,20 @@ export const ABOUT_CONTENT = {
   ],
 
   experience: [
+      {
+      title: "Data Engineer",
+      company: "EXL Service",
+      duration: "Aug 2025 – Present",
+    },
     {
       title: "Data Engineer",
       company: "NavAdr Technology Solution",
-      duration: "Jan 2025 – Present",
-    },
-    {
-      title: "Data Engineer - Trainee",
-      company: "V Connect Pvt. Ltd",
-      duration: "July 2024 – Jan 2025",
-    },
+      duration: "Dec 2024 – Aug 2025",
+    }
   ],
 
   certifications: [
+    "Databricks Knowledge Badge - AI/BI for Data Analysts",
     "Ultimate AWS Certified Solutions Architect Associate 2025 – Udemy",
     "Full-Stack Bootcamp 2023 – Udemy",
     "JavaScript Trainee (Remote) – RecruitNXT",
@@ -30,6 +31,7 @@ export const ABOUT_CONTENT = {
     {
       category: "Books I’ve Read",
       items: [
+        "Why I am Atheist - Bhagat Singh",
         "The Master Algorithm – Pedro Domingos",
         "Atomic Habits – James Clear",
         "The Quick and Easy Way to Effective Speaking - Dale Carnegie",
